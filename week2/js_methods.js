@@ -110,6 +110,7 @@ nn=c.flat(Infinity)
 //uniq
 
 //includes
-
+let intersection=a.filter(item=>(b.includes(item)))
+console.log(intersection)
 
 console.log(nn)

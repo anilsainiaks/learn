@@ -13,7 +13,7 @@ signUp("anil","ak@gmail.com",true)
 //want to pass less things and give default values to parameters in function
 const login=(name:string,email:string,isPaid:boolean=false)=>{}
 
-login("h","h@gmail.com")
+login("anil","a@gmail.com")
 
 //can also mention return type in functions
 const login1=(name:string,email:string,isPaid:boolean):boolean=>{
