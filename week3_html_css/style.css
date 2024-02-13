@@ -1,0 +1,17 @@
+.my:link{
+    color: green;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.my:hover{
+    color:pink;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.my:visited{
+    color:gray;
+    text-decoration: none;
+    background-color: transparent;
+}
