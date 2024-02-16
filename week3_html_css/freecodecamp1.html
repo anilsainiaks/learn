@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="try.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <div class="formContent">
+        <form action="" id="survey-form">
+            <!-- initial info -->
+            <label for="name" id="name-label">Name<input type="text" id="name" name="name" placeholder="Enter your name" required></label>
+            <label for="email" id="email-label">Email<input type="email" name="email" id="email" placeholder="Enter your email" required></label>
+            <label for="number" id="number-label">Age (optional)<input type="number" name="number" id="number" max="60" min="18" placeholder="Age"></label>
+            
+            <!-- select statement -->
+            <select name="dropdown" id="dropdown">
+                <option value="">Select current role</option>
+                <option value="student">Student</option>
+                <option value="fullTimeJob">Full Time Job</option>
+                <option value="fullTimeLearner">Full Time Learner</option>
+                <option value="preferNotToSay">Prefer Not To Say</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- radio button -->
+            <p>Would you recommend freeCodeCamp to a friend?</p>
+            <label for="recommendDefinitely"><input type="radio" name="recommend" id="recommendDefinitely" value="definitely" checked>Definitely</label>
+            <label for="recommendMaybe"><input type="radio" name="recommend" id="recommendMaybe" value="maybe">Maybe</label>
+            <label for="recommendNotSure"><input type="radio" name="recommend" id="recommendNotSure" value="notsure">Not Sure</label>
+
+            <!-- checkboxes -->
+            <p>What would you like to see improved? (check all that apply)</p>
+            <label for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" value="frontend">Front-end Projects</label>
+            <label for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" value="backend">Back-end Projects</label>
+            <label for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" value="dataVisualization">Data Visualization</label>
+            <label for="checkbox4"><input type="checkbox" name="checkbox4" id="checkbox4" value="challenges">Challenges</label>
+            <label for="checkbox5"><input type="checkbox" name="checkbox5" id="checkbox5" value="Open Source Community">Open Source Community</label>
+            <label for="checkbox6"><input type="checkbox" name="checkbox6" id="checkbox6" value="Gitter help rooms">Gitter help rooms</label>
+            <label for="checkbox7"><input type="checkbox" name="checkbox7" id="checkbox7" value="Videos">Videos</label>
+            <label for="checkbox8"><input type="checkbox" name="checkbox8" id="checkbox8" value="City Meetups">City Meetups</label>
+            <label for="checkbox9"><input type="checkbox" name="checkbox9" id="checkbox9" value="Wiki">Wiki</label>
+            <label for="checkbox10"><input type="checkbox" name="checkbox10" id="checkbox10" value="Forum">Forum</label>
+            <label for="checkbox11"><input type="checkbox" name="checkbox11" id="checkbox11" value="Additional Courses">Additional Courses</label>
+
+            <!-- textarea -->
+            <label for="comment">Any comments or suggestions?<textarea name="comment" id="comment" cols="30" rows="10"></textarea></label>
+
+            <!-- submit button -->
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
