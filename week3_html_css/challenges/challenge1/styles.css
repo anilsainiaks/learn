@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin:30px 120px 80px 120px;
+    background-color: #f3efef;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigateList{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap:20px
+}
+
+.navigateItem{
+    font-size: 18px;
+    opacity: 70%;
+}
+
+
+.navSignIn{
+    background:transparent;
+    border: none;
+    opacity: 70%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.tryForFree{
+    margin-left: 5px;
+    background: rgb(39, 58, 99);
+    border: none;
+    opacity: 70%;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    margin-top: 80px;
+    flex-direction: row;
+    gap:80px;
+}
+
+.lhs{
+    width: 80%;
+}
+
+.heading{
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.heading span:last-of-type{
+    color: orange;
+}
+
+.subheading{
+    font-size: 16px;
+    opacity: 70%;
+    padding: 10px;
+}
+
+.rating{
+    margin-top: 20px;
+    display: flex;
+    padding: 5px;
+}
+
+
+.heroImg{
+    width: 300px;
+    height: auto;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.partnersImg{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
