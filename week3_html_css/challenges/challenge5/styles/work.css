@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  padding: 25px 40px 150px 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.navbar .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  text-align: right;
+}
+.navbar .nav-links .active {
+  color: #FF6464;
+}
+.navbar .menu-icon {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.work {
+  padding: 0px 235px;
+  margin-bottom: 80px;
+}
+.work h2 {
+  font-size: 44px;
+  line-height: 60px;
+  font-weight: 900;
+  color: #21243D;
+}/*# sourceMappingURL=work.css.map */

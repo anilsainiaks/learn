@@ -1,0 +1,32 @@
+@import 'styles';
+
+.navbar{
+    padding: 25px 40px 150px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    .nav-links{
+        @include flexProperties($jc:flex-end);
+        gap: 20px;
+        text-align: right;
+
+        .active{
+            color: $primary;
+        }
+    }
+
+    .menu-icon{
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+    }
+}
+
+.work{
+    padding: 0px 235px;
+    margin-bottom: 80px;
+    h2{
+        @include fontDesc(44px,60px,900,$dark-color);
+    }
+}

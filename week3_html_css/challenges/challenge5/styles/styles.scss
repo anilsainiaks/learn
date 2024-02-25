@@ -1,0 +1,44 @@
+// Color Styles
+$primary:#FF6464;
+$secondary:#EDF7FA;
+$tertiary:#00A8CC;
+$dark:#142850;
+$dark-color:#21243D;
+$light:#8695A4;
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Heebo", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+@mixin flexProperties($direction:row,$jc:space-between,$ai:center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin fontDesc($fz,$lh,$fw:normal,$color:#000){
+    font-size: $fz;
+    line-height: $lh;
+    font-weight: $fw;
+    color:$color;
+}

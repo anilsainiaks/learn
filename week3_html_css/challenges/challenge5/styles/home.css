@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+.navbar {
+  padding: 25px 40px 150px 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.navbar .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  text-align: right;
+}
+.navbar .menu-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 0 148px 70px 148px;
+}
+.intro .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.intro .content .lhs {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.intro .content .lhs h1 {
+  font-size: 44px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #21243D;
+}
+.intro .content .lhs p {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #21243D;
+  margin: 40px 0;
+}
+.intro .content img {
+  border-bottom: 15px solid #EDF7FA;
+  border-radius: 50%;
+  background-color: #EDF7FA;
+}
+.intro button {
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  background: #FF6464;
+  padding: 9px 20px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+.recentPosts {
+  background: #EDF7FA;
+  padding: 10px 148px 30px 148px;
+}
+.recentPosts .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.recentPosts .top h3 {
+  font-size: 22px;
+  line-height: 60px;
+  font-weight: 400;
+  color: #21243D;
+}
+.recentPosts .top a {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #00A8CC;
+}
+.recentPosts .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+.recentPosts .cards .card {
+  background: #ffffff;
+  padding: 24px;
+  box-shadow: 0px 4px 10px 0px rgba(187, 225, 250, 0.2509803922);
+  border-radius: 4px;
+}
+.recentPosts .cards .card h2 {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 700;
+  color: #21243D;
+}
+.recentPosts .cards .card h4 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #21243D;
+  display: flex;
+  gap: 40px;
+  margin: 20px 0 18px 0;
+}
+.recentPosts .cards .card h4 span:first-child {
+  border-right: 1.8px solid #000;
+  padding-right: 40px;
+}
+.recentPosts .cards .card p {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #21243D;
+}
+
+.featuredWorks {
+  padding: 10px 148px 100px 148px;
+}
+.featuredWorks h3 {
+  font-size: 22px;
+  line-height: 60px;
+  font-weight: 400;
+  color: #21243D;
+}
+.featuredWorks .workCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.featuredWorks .workCards .workCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 20px 0;
+}
+.featuredWorks .workCards .workCard h2 {
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 700;
+  color: #21243D;
+}
+.featuredWorks .workCards .workCard h4 span:first-child {
+  font-size: 18px;
+  line-height: 60px;
+  font-weight: 900;
+  color: #ffffff;
+  background: #142850;
+  border-radius: 16px;
+  padding: 2px 10px;
+  text-align: center;
+}
+.featuredWorks .workCards .workCard h4 span:last-child {
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: 400;
+  color: #8695A4;
+  margin-left: 25px;
+}
+.featuredWorks .workCards .workCard p {
+  font-size: 16px;
+  line-height: 23.5px;
+  font-weight: 400;
+  color: #21243D;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.footer .socialMedia-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.footer h4 {
+  font-size: 14px;
+  line-height: 20.5px;
+  font-weight: 400;
+  color: #142850;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    overflow: hidden;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    background: #EDF7FA;
+    margin-top: -999px;
+    transition: all 0.5s ease;
+  }
+  .navbar .menu-icon {
+    display: block;
+  }
+  .navbar .mobile-menu {
+    margin: 0px;
+    border-bottom-right-radius: 30%;
+  }
+  .intro {
+    align-items: center;
+  }
+  .intro .content {
+    flex-direction: column-reverse;
+  }
+  .intro .content .lhs {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .intro .content .lhs h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #21243D;
+  }
+  .intro .content .lhs p {
+    font-size: 16px;
+    line-height: 23px;
+    margin: 20px 0;
+  }
+  .recentPosts {
+    padding: 20px 30px;
+  }
+  .recentPosts .top {
+    justify-content: center;
+  }
+  .recentPosts .top h3 {
+    font-size: 18px;
+  }
+  .recentPosts .top a {
+    display: none;
+  }
+  .recentPosts .cards {
+    flex-direction: column;
+  }
+  .recentPosts .cards .card h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .recentPosts .cards .card h4, .recentPosts .cards .card p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .featuredWorks {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  .featuredWorks h3 {
+    text-align: center;
+    font-size: 18px;
+  }
+  .featuredWorks .workCards .workCard:not(:first-child) {
+    display: none;
+  }
+  .featuredWorks .workCards .workCard {
+    flex-direction: column;
+    align-items: center;
+  }
+  .featuredWorks .workCards .workCard img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+  }
+  .featuredWorks .workCards .workCard h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .featuredWorks .workCards .workCard h4 span:first-child {
+    font-size: 16px;
+    line-height: 60px;
+  }
+  .featuredWorks .workCards .workCard h4 span:last-child {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .featuredWorks .workCards .workCard p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}/*# sourceMappingURL=home.css.map */
