@@ -1,0 +1,192 @@
+// COLORS
+$primary:linear-gradient(to right,#a517ba,#5f1782);
+$secondary:#7b1798;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+#nav-bar{
+    position:sticky;
+    top: 0;
+    z-index: 10;
+
+    .navbar{
+        background-image: $primary;
+        padding: 0;
+
+        .navbar-toggler{
+            border: none;
+            .fa{
+                color: #fff;
+                // font-size: 1.2em;
+                font-weight: 500;
+            }
+        }
+
+        .navbar-brand{
+            img{
+            height: 40px;
+            padding-left: 20px;
+            }
+        }
+
+        #navbarNav{
+            .navbar-nav{
+                li{
+                    padding: 0 10px;
+        
+                    a{
+                        color:white;
+                        float: right;
+                        text-align: left;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+// BANNER SECTION
+#banner{
+    background-image: $primary;
+    color: #fff;
+    padding-top: 5%;
+
+    .container{
+        .row{
+            .col-md-6{
+                .promo-title{
+                    font-size: 40px;
+                    font-weight: 600;
+                    margin-top: 100px;
+                }
+    
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    .play-btn{
+                        width: 45px;
+                        margin: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-img{
+        width: 100%;
+    }
+}
+
+
+// SERVICES SECTION
+#services{
+    padding: 80px 0;
+    .btn-primary{
+        box-shadow: none;
+        padding: 8px 25px;
+        border: none;
+        border-radius: 20px;
+        background: $primary;
+    }
+    .container{
+        
+        .title{
+            &:before{
+                content: '';
+                display: block;
+                background: $secondary;
+                height: 5px;
+                width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                transform: translateY(63px);
+            }
+            &:after{
+                content: '';
+                display: block;
+                background: $secondary;
+                height: 10px;
+                width: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 40px;
+                transform: translateY(8px);
+            }
+        }
+
+        .row{
+            .col-md-4{
+                img{
+                    width: 100px;
+                    margin-top: 20px;
+                }
+            }
+            .services{
+                padding: 20px;
+
+                h4{
+                    padding: 5px;
+                    margin-top: 25px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+// about us
+#about-us{
+    background: #f8f9fa;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    .container{
+        .title{
+            &:before{
+                content: '';
+                display: block;
+                background: $secondary;
+                height: 5px;
+                width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                transform: translateY(63px);
+            }
+            &:after{
+                content: '';
+                display: block;
+                background: $secondary;
+                height: 10px;
+                width: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 40px;
+                transform: translateY(8px);
+            }
+        }
+
+        .row{
+            .col-md-6{
+                .about-title{
+                    font-size: 40px;
+                    font-weight: 600;
+                    margin-top: 8%;
+                }
+
+                ul{
+                    li{
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}
