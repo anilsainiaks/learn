@@ -1,6 +1,7 @@
 // COLORS
 $primary:linear-gradient(to right,#a517ba,#5f1782);
 $secondary:#7b1798;
+$light:#f8f9fa;
 
 *{
     margin: 0;
@@ -9,6 +10,30 @@ $secondary:#7b1798;
 
 body{
     font-family: sans-serif;
+}
+
+.title{
+    &:before{
+        content: '';
+        display: block;
+        background: $secondary;
+        height: 5px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateY(63px);
+    }
+    &:after{
+        content: '';
+        display: block;
+        background: $secondary;
+        height: 10px;
+        width: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        transform: translateY(8px);
+    }
 }
 
 #nav-bar{
@@ -97,31 +122,6 @@ body{
         background: $primary;
     }
     .container{
-        
-        .title{
-            &:before{
-                content: '';
-                display: block;
-                background: $secondary;
-                height: 5px;
-                width: 200px;
-                margin-left: auto;
-                margin-right: auto;
-                transform: translateY(63px);
-            }
-            &:after{
-                content: '';
-                display: block;
-                background: $secondary;
-                height: 10px;
-                width: 50px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 40px;
-                transform: translateY(8px);
-            }
-        }
-
         .row{
             .col-md-4{
                 img{
@@ -145,34 +145,10 @@ body{
 
 // about us
 #about-us{
-    background: #f8f9fa;
+    background: $light;
     padding-bottom: 50px;
     padding-top: 50px;
     .container{
-        .title{
-            &:before{
-                content: '';
-                display: block;
-                background: $secondary;
-                height: 5px;
-                width: 200px;
-                margin-left: auto;
-                margin-right: auto;
-                transform: translateY(63px);
-            }
-            &:after{
-                content: '';
-                display: block;
-                background: $secondary;
-                height: 10px;
-                width: 50px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 40px;
-                transform: translateY(8px);
-            }
-        }
-
         .row{
             .col-md-6{
                 .about-title{
@@ -182,9 +158,112 @@ body{
                 }
 
                 ul{
+                    margin-left: 20px;
                     li{
                         margin: 10px 0;
                     }
+                }
+            }
+        }
+    }
+}
+
+//  TESTIMONIALS
+#testimonials{
+    margin: 100px 0;
+    .container{
+        .row{
+            .testimonials{
+                border-left: 4px solid $secondary;
+                margin-top: 50px 0;
+
+                img{
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    margin: 0px 10px;
+                }
+
+                .user-details{
+                    display: inline-block;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+// SOCIAL MEDIA
+#socia-media{
+    background: $light;
+    padding: 100px 0;
+    
+    .container{
+        p{
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .social-icons{
+            a{
+                img{
+                    width: 60px;
+                    transition: 0.5s;
+                }
+
+                &:hover img{
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+}
+
+//  FOOTER SECTION
+#footer{
+    background: $primary;
+    color: #fff;
+
+    .footer-img{
+        width: 100%;
+    }
+
+    .container{
+        .row{
+            .col-md-4{
+                img{
+                    width: 120px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .footer-box{
+                .fa{
+                    margin-right: 8px;
+                    font-size: 25px;
+                    height: 40px;
+                    width: 40px;
+                    text-align: center;
+                    padding-top: 7px;
+                    border-radius: 2px;
+                    background: $primary;
+                }
+
+                .form-control{
+                    box-shadow: none;
+                    border: none;
+                    margin-top: 25px;
+                    max-width: 250px;
+                    border-radius: 0;
+                }
+
+                .btn{
+                    box-shadow: none;
+                    border: none;
+                    margin-top: 30px;
+                    background: $primary;
+                    border-radius: 0;
                 }
             }
         }
