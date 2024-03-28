@@ -19,7 +19,7 @@ router.post('/order-items',loginStatus,shopController.postOrder);
 
 router.get('/checkout',isAuth,shopController.getCheckout);
 
-router.get('/checkout/success',shopController.getCheckoutSuccess);
+router.get('/checkout/success',shopController.postOrder);
 
 router.get('/checkout/cancel',shopController.getCheckoutCancel);
 

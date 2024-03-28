@@ -9,7 +9,9 @@ const { afterRead } = require('@popperjs/core');
 const fs = require('fs');
 const path = require('path');
 const PDFDocument = require('pdfkit');
-const stripe = require('stripe')('sk_test_51OzCkBSBx2YpACrt9klfELXtiUnemMTV0F4d0uZqxkvlvz6Tgo0dv1Mq34WVpA9l7jNtijiIyF48xSTWheD1kufD00VHFIZQXD');
+const dotenv = require('dotenv');
+dotenv.config();
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 db();
 const ITEMS_PER_PAGE = 4;
 exports.getProducts=(req,res,next)=>{
@@ -198,12 +200,33 @@ exports.getCheckout=async(req,res,next)=>{
             return item
         }));
         totalPrice=(await Cart.query().findById(req.cart.id)).totalPrice;
+        const session = await stripe.checkout.sessions.create({
+            payment_method_types : ['card'],
+            line_items : products.map(p=>{
+                return {
+                    price_data:{
+                        currency:'inr',
+                        product_data:{
+                            name:p.product.title,
+                            description:p.product.description,
+                        },
+                        unit_amount:p.product.price *100,
+                    },
+                    quantity:p.quantity
+                }
+            }),
+            customer_email:req.user.email,
+            mode:'payment',
+            success_url:req.protocol + '://' + req.get('host') + '/checkout/success',
+            cancel_url:req.protocol + '://' + req.get('host') + '/checkout/cancel',
+        });
         res.render('shop/checkout',{
             products:products,    
             path:'/checkout',
             pageTitle:'Checkout',
             username:username,
-            totalPrice:totalPrice
+            totalPrice:totalPrice,
+            sessionId:session.id
         });
     }catch(err){
         console.log(err);
@@ -355,9 +378,6 @@ exports.getInvoice =async (req,res,next) =>{
     // file.pipe(res);
 }
 
-exports.getCheckoutSuccess=(req,res,next) =>{
-    res.redirect('/orders');
-}
 
 exports.getCheckoutCancel = (req,res,next) =>{
     let username;
