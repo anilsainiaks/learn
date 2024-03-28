@@ -1,0 +1,21 @@
+.card{
+    flex-direction: row;
+}
+
+.buttons{
+    margin: auto 5px;
+}
+
+.card-img-top{
+    max-width: 150px;
+}
+
+.totalPrice{
+    text-align: right;
+    margin-top: 20px;
+    font-family: serif,sans-serif;
+}
+
+.totalPrice h3{
+    font-weight: 900;
+}

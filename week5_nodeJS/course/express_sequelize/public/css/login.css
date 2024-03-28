@@ -1,0 +1,27 @@
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    border: none;
+    font-family: sans-serif,serif;
+}
+
+label{
+    margin: 0px auto;
+    margin-top: 20px;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+input{
+    width: 300px;
+    margin: 0px auto;
+}
+
+button{
+    margin: 0px auto;
+    margin-top: 20px;
+    width: 300px;
+    font-weight: 700;
+}

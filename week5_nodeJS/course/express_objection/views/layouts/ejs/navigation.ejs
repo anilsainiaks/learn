@@ -1,0 +1,41 @@
+</head>
+<body>
+<header class="main-header">
+    <nav class="main-header_nav">
+        <ul class="main-header_item-list">
+            <li class="main-header_item username">
+                <a  href="/">
+                       <%= username %>
+                </a>
+            </li>
+            
+            <li class="main-header_item"><a class="<%= path==='/' ? 'active' : '' %>" href="/">Shop</a></li>
+            <li class="main-header_item"><a class="<%= path==='/products' ? 'active' : '' %>" href="/products">Products</a></li>
+
+            <% if(isAuthenticated) {%>
+            <li class="main-header_item"><a class="<%= path==='/cart' ? 'active' : '' %>" href="/cart">Cart</a></li>
+            <li class="main-header_item"><a class="<%= path==='/orders' ? 'active' : '' %>" href="/orders">Orders</a></li>
+
+            <li class="main-header_item"><a class="<%= path==='/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Add Product</a></li>
+            <li class="main-header_item"><a class="<%= path==='/admin/products' ? 'active' : '' %>" href="/admin/products">Admin Products</a></li>
+            <%}%>
+        </ul>
+        <ul class="main-header_item-list">
+            <% if(!isAuthenticated) {%>
+            <li class="main-header_item">
+                <a href="/login" class="btn btn-primary loginBtn">Login</a>
+            </li>
+            <li class="main-header_item">
+                <a href="/signup" class="btn btn-primary loginBtn">Sign Up</a>
+            </li>
+            <%} else{%>
+            <li class="main-header_item">
+                <form action="/logout" method="POST" class="logoutForm">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button class="btn btn-primary logoutbtn" type="submit">Logout</button>
+                </form>
+            </li>
+            <%}%>
+        </ul>
+    </nav>
+</header>

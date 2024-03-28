@@ -1,0 +1,30 @@
+<%- include('../layouts/ejs/head.ejs')  %>
+    <link rel="stylesheet" href="/css/login.css">
+    <%- include('../layouts/ejs/navigation.ejs') %>
+
+    <main>
+        <div class="container">
+            <% if(errorMessage) {%>
+                <div class="user-message user-message-error"><%= errorMessage %></div>
+            <%}%>
+            <div class="login-form">
+                <form class="form-control" method="post" action="/signup">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" value="<%= oldInput.name %>" placeholder="Enter email" id="name">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" value="<%= oldInput.email %>" placeholder="Enter email" id="email">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Enter password" id="password">
+
+                    <label for="cnfPassword">Confirm Password</label>
+                    <input type="password" name="cnfPassword" placeholder="Confirm Password" id="cnfPassword">
+
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <%- include('../layouts/ejs/end.ejs') %>

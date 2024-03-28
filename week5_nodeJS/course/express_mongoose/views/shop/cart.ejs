@@ -1,0 +1,48 @@
+<%- include('../layouts/ejs/head.ejs')  %>
+<link rel="stylesheet" href="/css/cart.css">
+<style>
+    .placeOrder{
+        text-align: right;
+        margin-top: 40px;
+    }
+</style>
+<%- include('../layouts/ejs/navigation.ejs') %>
+
+<main>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-1 g-4">
+            <% if(products.length>0){ %>
+            <% for(product of products) { %>
+            <div class="col">
+                <div class="card">
+                    <img src="<%= product.productId.imgUrl %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title"><%= product.productId.title %></h3>
+                        <h5 class="card-title">Rs <%= product.productId.price %></h5>
+                        <p class="card-text"><%= product.productId.description %></p>
+                        <h6 class="mt-5">Product Quantity : <%= product.quantity %></h6>
+                    </div>
+                    <div class="buttons">
+                        <a href="/cart/<%= product.productId._id %>" class="btn btn-primary">Add More</a>
+                        <form action="/cart/deleteItem" method="POST">
+                            <input type="hidden" value="<%= product.productId._id %>" name="prodId">
+                            <button class=" mt-3 btn btn-primary">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <% }%>
+            <% }else{%>
+                <h1>Cart is Empty</h1>
+            <% } %>
+        </div>
+        <div class="totalPrice">
+            <h4>Total Price : <%= totalPrice %></h4>
+        </div>
+        <form action="/order-items" class="placeOrder" method="POST">
+            <button class="btn btn-primary">Place Order</button>
+        </form>
+    </div>
+</main>
+
+<%- include('../layouts/ejs/end.ejs') %>

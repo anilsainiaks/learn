@@ -1,0 +1,31 @@
+<%- include('../layouts/ejs/head.ejs')  %>
+    <link rel="stylesheet" href="/css/add-product.css">
+    <%- include('../layouts/ejs/navigation.ejs') %>
+
+    <main class="form-control">
+      <% if(errorMessage) {%>
+        <div class="user-message user-message-error"><%= errorMessage %></div>
+      <%}%>
+      <form class="product-form mt-3" action="/admin/<%= editing ? 'edit-product' : 'add-product' %>" method="POST" enctype="multipart/form-data">
+        <label for="title">Title</label>
+        <input type="text" value="<%= editing ? product.title : oldInput.title %>" name="title" id="title" />
+
+        <label for="imgUrl">Img </label>
+        <!-- <input type="text" value="<%= editing ? product.imgUrl : oldInput.imgUrl %>"  name="imgUrl" id="imgUrl" /> -->
+        <input type="file" name="imgUrl" id="imgUrl">
+
+        <label for="price">Price</label>
+        <input type="text" value="<%= editing ? product.price : oldInput.price %>"  name="price" id="price" />
+
+        <label for="description">description</label>
+        <textarea row=5 name="description" id="description"><%= editing ? product.description : oldInput.description %></textarea>
+
+        <% if(editing){ %>
+          <input type="hidden" value="<%= product.id %>" name="prodId">
+        <% } %>
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <button type="submit" class="btn btn-primary"><%= editing ? 'Update Product' : 'Add Product' %></button>
+        
+      </form>
+    </main>
+    <%- include('../layouts/ejs/end.ejs') %>

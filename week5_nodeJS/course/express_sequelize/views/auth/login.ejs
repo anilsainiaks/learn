@@ -1,0 +1,20 @@
+<%- include('../layouts/ejs/head.ejs')  %>
+    <link rel="stylesheet" href="/css/login.css">
+    <%- include('../layouts/ejs/navigation.ejs') %>
+
+    <main>
+        <div class="container">
+            <div class="login-form">
+                <form class="form-control" method="post" action="/login">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" placeholder="Enter email" id="email">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Enter password" id="password">
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <%- include('../layouts/ejs/end.ejs') %>

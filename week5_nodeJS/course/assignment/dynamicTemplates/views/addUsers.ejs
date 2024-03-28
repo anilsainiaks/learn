@@ -1,0 +1,15 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+<%- include('includes/navbar.ejs') %>
+
+    <main>
+        <div class="container">
+            <form action="/admin/addUsers" method="POST" class="form-control">
+                <label for="name">Name : </label>
+                <input type="text" name="name" placeholder="Enter name">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </main>
+
+<%- include('includes/end.ejs') %>

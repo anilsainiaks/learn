@@ -1,0 +1,48 @@
+<%- include('../layouts/ejs/head.ejs') %>
+<link rel="stylesheet" href="/css/cart.css" />
+<style>
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .totalPrice {
+    margin-top: 40px;
+  }
+</style>
+<%- include('../layouts/ejs/navigation.ejs') %>
+
+<main>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-1 g-4">
+      <% if(orders.length>0){ %> <% for(order of orders){ %>
+      <div class="top mt-5">
+        <h1>Order Id : <%= order._id %></h1>
+        <h3 class="totalPrice">Total Price : <%= order.totalPrice %></h3>
+      </div>
+      <% for(product of order.products) { %>
+
+      <div class="col">
+        <div class="card">
+          <img
+            src="<%= product.product.imgUrl %>"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h3 class="card-title"><%= product.product.title %></h3>
+            <h5 class="card-title">Rs <%= product.product.price %></h5>
+            <p class="card-text"><%= product.product.description %></p>
+            <h6 class="mt-5">Product Quantity : <%= product.quantity %></h6>
+          </div>
+        </div>
+      </div>
+
+      <% }%> <% } %> <% }else{%>
+      <h1>Cart is Empty</h1>
+      <% } %>
+    </div>
+  </div>
+</main>
+
+<%- include('../layouts/ejs/end.ejs') %>

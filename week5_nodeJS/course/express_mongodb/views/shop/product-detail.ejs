@@ -1,0 +1,24 @@
+<%- include('../layouts/ejs/head.ejs')  %>
+<style>
+    img{
+        max-width: 300px;
+    }
+</style>
+<%- include('../layouts/ejs/navigation.ejs') %>
+
+<main>
+    <div class="container">
+        <div class="content text-center">
+            <h1><%= product.title %></h1>
+            <hr>
+            <div>
+                <img src="<%= product.imgUrl%>" alt="">
+            </div>
+            <h2>Rs <%= product.price%></h2>
+            <p><%= product.description %></p>
+            <a href="/cart/<%= product._id %>" class="btn btn-primary">Add to Cart</a>
+        </div>
+    </div>
+</main>
+
+<%- include('../layouts/ejs/end.ejs') %>
