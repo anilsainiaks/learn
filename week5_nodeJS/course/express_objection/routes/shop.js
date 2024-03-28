@@ -17,7 +17,11 @@ router.get('/orders',loginStatus,shopController.getOrder);
 
 router.post('/order-items',loginStatus,shopController.postOrder);
 
-// router.get('/checkout',shopController.getCheckout);
+router.get('/checkout',isAuth,shopController.getCheckout);
+
+router.get('/checkout/success',shopController.getCheckoutSuccess);
+
+router.get('/checkout/cancel',shopController.getCheckoutCancel);
 
 router.get('/products/:productId',shopController.getProduct);
 

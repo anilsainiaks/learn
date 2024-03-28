@@ -41,12 +41,11 @@
             <h4>Total Price : <%= totalPrice %></h4>
         </div>
         <div class="orderButton">
-            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-            <button class="btn btn-primary" id="orderButton">Place Order</button>
-            <script src="https://js.stripe.com/v3/"></script>
-            <script src="/js/checkout.js"></script>
+            <a class="btn btn-primary" href="/checkout">Place Order</a>
         </div>
+            
     </div>
 </main>
-
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/js/checkout.js"></script>
 <%- include('../layouts/ejs/end.ejs') %>

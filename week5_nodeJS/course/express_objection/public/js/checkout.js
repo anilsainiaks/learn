@@ -4,6 +4,6 @@ const orderButton = document.getElementById('orderButton');
 
 orderButton.addEventListener('click',function(){
     stripe.redirectToCheckout({
-        
+        sessionId:'<%= sessionId %>'
     })
 })
